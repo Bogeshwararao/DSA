@@ -13,9 +13,7 @@ public class Twosum {
                 System.out.println(i + ","+ HM.get(comp));
             }else {
                 HM.put(nums[i],i);
-            }
-            
+            }   
         }
-        //  return null; 
     }
 }
