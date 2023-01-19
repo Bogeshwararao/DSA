@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch FactorialDemo",
+            "request": "launch",
+            "mainClass": "Easy.FactorialDemo",
+            "projectName": "Leet-code_bebbf14c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Twosum",
+            "request": "launch",
+            "mainClass": "Easy.Twosum",
+            "projectName": "Leet-code_bebbf14c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hashmap",
+            "request": "launch",
+            "mainClass": "Hashmap",
+            "projectName": "Leet-code_bebbf14c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Add",
+            "request": "launch",
+            "mainClass": "e.Add",
+            "projectName": "Leet-code_bebbf14c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Balance",
+            "request": "launch",
+            "mainClass": "e.Balance",
+            "projectName": "Leet-code_bebbf14c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Demo",
+            "request": "launch",
+            "mainClass": "e.Demo",
+            "projectName": "Leet-code_bebbf14c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Details",
+            "request": "launch",
+            "mainClass": "e.Details",
+            "projectName": "Leet-code_bebbf14c"
+        }
+    ]
+}
