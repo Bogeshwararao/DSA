@@ -160,5 +160,6 @@ static void pattern11(int n){
     pattern9(4);
     pattern10(4);
     pattern11(4);
+    pattern11(4);
     }
 }
