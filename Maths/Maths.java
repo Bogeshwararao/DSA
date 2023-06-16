@@ -9,7 +9,19 @@ public class Maths {
         }
         System.out.println(Count);
     }
+    static void Reverse(int n){
+        int Rever=0;
+        while(n!=0){
+            int digit= n%10;
+            Rever=Rever*10+digit;
+            n/=10;
+           
+        }
+         System.out.println(Rever);
+        
+    }
     public static void main(String[] args) {
         Countingdigits(2004);
+        Reverse(2004);
     }
 }
