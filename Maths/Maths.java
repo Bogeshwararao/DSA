@@ -20,8 +20,25 @@ public class Maths {
          System.out.println(Rever);
         
     }
+    static void Palidrome(int n){
+        int Rever=0;
+        int dup=n;
+        while(n!=0){
+            int digit= n%10;
+            Rever=Rever*10+digit;
+            n/=10;
+           
+        }
+        if(dup==Rever){
+         System.out.println(Rever);}
+         else{
+            System.out.println("Not an palidrome");
+         }
+        
+    }
     public static void main(String[] args) {
         Countingdigits(2004);
         Reverse(2004);
+        Palidrome(12);
     }
 }
