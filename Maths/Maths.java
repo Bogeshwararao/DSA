@@ -36,9 +36,28 @@ public class Maths {
          }
         
     }
+    static void Amstrong(int n){
+        int dup=n;
+        int Amstro=0;
+        while(n!=0){
+            int digit= n%10;
+            Amstro=Amstro+digit*digit*digit;
+
+            n/=10;
+           
+        }
+        if(Amstro==dup){
+         System.out.println(Amstro);}
+         else{
+            System.out.println("Not an amstrong");
+         }
+        
+        
+    }
     public static void main(String[] args) {
         Countingdigits(2004);
         Reverse(2004);
         Palidrome(12);
+        Amstrong(371);
     }
 }
