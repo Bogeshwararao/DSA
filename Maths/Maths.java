@@ -54,10 +54,43 @@ public class Maths {
         
         
     }
+    static void Divisor(int n){
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                System.out.print(i+",");
+            }
+        }
+    }
+    static void Prime(int n){
+        int cout=0;
+        for(int i=0;i<=n;i++){
+            if(n%1==0){
+                cout +=1;
+            }
+        }
+        if(cout==2){
+            System.out.println("prime");
+        }
+        else{
+            System.out.println("not an prime");
+        }
+    }
+    static void Hcf(int a,int b){
+        
+        for(int i= Math.min(a,b);i>1;i--){
+            if(a%i==0 && b%i==0){
+                System.out.println(i);
+                break;
+            }
+        }
+    }
     public static void main(String[] args) {
         Countingdigits(2004);
         Reverse(2004);
         Palidrome(12);
         Amstrong(371);
+        Divisor(3);
+        Prime(12);
+        Hcf(30,20);
     }
 }
