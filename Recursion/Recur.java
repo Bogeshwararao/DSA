@@ -56,6 +56,26 @@ public class Recur {
       }
       printArray(ans, n);
    }
+   static boolean palid(int i, String s){
+               if(i>=s.length()/2) return true;
+             if(s.charAt(i)!=s.charAt(s.length()-i-1)) return false;
+             return palid(i+1,s);
+ }
+ static void Fiba(int n){
+    if(n==0){
+    System.out.println("0");
+    }else {
+        int First=0;
+        int Second=1;
+        System.out.print(First+" "+Second+" ");
+        for(int i =2;i<=n;i++){
+              int nxt=First+Second;
+              First= Second;
+              Second=nxt;
+              System.out.print(nxt+" ");
+        }
+    }
+ }
     public static void main(String[] args) {
         print();
         Nname(1,4);
@@ -66,6 +86,9 @@ public class Recur {
      int n = 5;
       int arr[] = { 5, 4, 3, 2, 1};
       reverseArray(arr, n);
+       String s = "madam";
+       System.out.println(palid(0,s));
+       Fiba(5);
     }
 
     }
