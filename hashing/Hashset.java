@@ -14,7 +14,7 @@ public class Hashset {
             set.add(arr2[j]);
         }
         System.out.println(set.size());
-         Iterator itr = set.iterator();
+        Iterator itr = set.iterator();
         while (itr.hasNext()) {
             System.out.print(itr.next()+" ");
         }

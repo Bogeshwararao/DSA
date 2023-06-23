@@ -6,7 +6,7 @@ import java.util.Map;
 public class Hashmap {
          static void Frequency(int arr[], int n)
 {
-    Map<Integer, Integer> map = new HashMap<>();
+    HashMap<Integer, Integer> map = new HashMap<>();
  
     for (int i = 0; i < n; i++)
     {
@@ -25,6 +25,9 @@ public class Hashmap {
         System.out.println(entry.getKey() + " " + entry.getValue());
     }
 }
+ static void main(int arr){
+
+ }
 public static void main(String[] args) {
     int arr[] = {10,5,10,15,10,5};
      int arr1[] = {10,5,6,15};
