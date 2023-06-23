@@ -43,7 +43,7 @@ public class Sorting {
     public static void main(String[] args) {
         int arr[] = {13, 46, 24, 52, 20, 9};
         int n = arr.length;
-        // Selection_sort(arr, n);
+        Selection_sort(arr, n);
          Bubble_sort(arr,n);
     }
 }
