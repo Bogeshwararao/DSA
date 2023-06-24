@@ -64,17 +64,30 @@ public class Easyarray {
 
     return true;
     }
+    static void Removedup(int arr1[],int n){
+        HashSet<Integer> set=new HashSet<>();
+        for(int i=0;i<n;i++){
+            set.add(arr1[i]);
+        }
+         Iterator itr = set.iterator();
+        while (itr.hasNext()) {
+            System.out.print(itr.next()+" ");
+        }
+    }
     static void Rough(int arr,int n){
         int large = Integer.MIN_VALUE;
         System.out.println(large);
     }
     public static void main(String[] args) {
         int arr[]={13,14,2,76,45};
+        int arr1[]={1,1,2,2,2,3,4};
         int n=arr.length;
+        int n1=arr1.length;
         // System.out.println(Largest(arr, n));
         Largest(arr, n);
         Secondlarge(arr, n);
         secondSmallest(arr, n);
         Sort(arr, n);
+        Removedup(arr1,n1);
     }
 }
