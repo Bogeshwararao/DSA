@@ -34,11 +34,47 @@ public class Easyarray {
         }
 
     }
+    static int secondSmallest(int arr[], int n){
+        if (n < 2)
+	{
+		return -1;
+	}
+	int small = Integer.MAX_VALUE;
+	int second_small = Integer.MAX_VALUE;
+	int i;
+	for (i = 0; i < n; i++)
+	{
+	   if (arr[i] < small)
+	   {
+		  second_small = small;
+		  small = arr[i];
+	   }
+	   else if (arr[i] < second_small && arr[i] != small)
+	   {
+		  second_small = arr[i];
+	   }
+	}
+   return second_small;
+    }
+    static boolean Sort(int arr[], int n){
+        for (int i = 1; i < n; i++) {
+      if (arr[i] < arr[i - 1])
+        return false;
+    }
+
+    return true;
+    }
+    static void Rough(int arr,int n){
+        int large = Integer.MIN_VALUE;
+        System.out.println(large);
+    }
     public static void main(String[] args) {
-        int arr[]={13,14,2,76,76,45};
+        int arr[]={13,14,2,76,45};
         int n=arr.length;
         // System.out.println(Largest(arr, n));
         Largest(arr, n);
         Secondlarge(arr, n);
+        secondSmallest(arr, n);
+        Sort(arr, n);
     }
 }
