@@ -34,6 +34,20 @@ public class Easyarray {
         }
 
     }
+     static void Secondsmall(int arr[],int n){
+        if(n<2){
+            System.out.println("invalid");
+            return;
+        }
+        Arrays.sort(arr);
+        for(int j=1;j<n;j++){
+            if(arr[j]!=arr[j-1]){
+                System.out.println(arr[j]);
+                return;
+            }
+        }
+
+    }
     static int secondSmallest(int arr[], int n){
         if (n < 2)
 	{
@@ -84,10 +98,11 @@ public class Easyarray {
         int n=arr.length;
         int n1=arr1.length;
         // System.out.println(Largest(arr, n));
-        Largest(arr, n);
-        Secondlarge(arr, n);
-        secondSmallest(arr, n);
-        Sort(arr, n);
-        Removedup(arr1,n1);
+        //Largest(arr, n);
+        //Secondlarge(arr, n);
+        //secondSmallest(arr, n);
+        Secondsmall(arr, n);
+        //Sort(arr, n);
+        //Removedup(arr1,n1);
     }
 }
