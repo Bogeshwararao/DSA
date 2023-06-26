@@ -95,8 +95,7 @@ public class Easyarray {
         }
         arr[n-1]=temp;
         Print(arr,n);
-    }
-      
+    }      
       static void Reverse(int arr[],int n,int start,int end){
             while(start<=end){
                 int temp=arr[start];
@@ -116,12 +115,31 @@ public class Easyarray {
         Reverse(arr, n,  0, n-1);
          Print(arr, n);
       }
+      static void Nonzerotolast(int arr[], int n){
+        int j=-1;
+        for(int i=0;i<n;i++){
+            if(arr[i]==0){
+                j=i;
+                break;
+            }
+        }
+        if(j==-1) return;
+        for(int i=j+1;i<n;i++){
+            if(arr[i]!=0){
+                int temp= arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+                j++;
+            }
+        }
+        Print(arr,n);
+      }
       static void Rough(int arr,int n){
         int large = Integer.MIN_VALUE;
         System.out.println(large);
     }
     public static void main(String[] args) {
-        int arr[]={13,14,2,76,45};
+        int arr[]={13,0,14,0,2,0,76,45};
         int arr1[]={1,1,2,2,2,3,4};
         int n=arr.length;
         int n1=arr1.length;
@@ -134,6 +152,7 @@ public class Easyarray {
         //Removedup(arr1,n1);
        // Leftrotateoneplace(arr,5);
         //Reverse(arr,0,2,n);
-        Leftrotatedplace(arr,n,13);
+        //Leftrotatedplace(arr,n,13);
+        Nonzerotolast(arr,n);
     }
 }
