@@ -88,7 +88,35 @@ public class Easyarray {
             System.out.print(itr.next()+" ");
         }
     }
-    static void Rough(int arr,int n){
+    static void Leftrotateoneplace(int arr[], int n){
+        int temp = arr[0];
+        for(int i=1;i<n;i++){
+           arr[i-1]=arr[i];
+        }
+        arr[n-1]=temp;
+        Print(arr,n);
+    }
+      
+      static void Reverse(int arr[],int n,int start,int end){
+            while(start<=end){
+                int temp=arr[start];
+                arr[start]=arr[end];
+                arr[end]=temp;
+                start++;
+                end--;
+             }
+           // Print(arr, n);
+      }
+      static void Leftrotatedplace(int arr[],int n, int d){
+        if(d>n){
+            d=d%n;
+        }
+        Reverse(arr, n,  0, d-1);
+         Reverse(arr, n,  d, n-1);
+        Reverse(arr, n,  0, n-1);
+         Print(arr, n);
+      }
+      static void Rough(int arr,int n){
         int large = Integer.MIN_VALUE;
         System.out.println(large);
     }
@@ -101,8 +129,11 @@ public class Easyarray {
         //Largest(arr, n);
         //Secondlarge(arr, n);
         //secondSmallest(arr, n);
-        Secondsmall(arr, n);
+      //  Secondsmall(arr, n);
         //Sort(arr, n);
         //Removedup(arr1,n1);
+       // Leftrotateoneplace(arr,5);
+        //Reverse(arr,0,2,n);
+        Leftrotatedplace(arr,n,13);
     }
 }
