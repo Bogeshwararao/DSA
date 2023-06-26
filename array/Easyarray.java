@@ -134,6 +134,16 @@ public class Easyarray {
         }
         Print(arr,n);
       }
+      static void Linearsearch(int arr[], int n,int num){
+               for(int i=0;i<n;i++){
+                if(arr[i]==num){
+                   System.out.println(i);
+                   return;
+                }
+                
+               }   
+               System.out.println("not found");
+      }
       static void Rough(int arr,int n){
         int large = Integer.MIN_VALUE;
         System.out.println(large);
@@ -153,6 +163,7 @@ public class Easyarray {
        // Leftrotateoneplace(arr,5);
         //Reverse(arr,0,2,n);
         //Leftrotatedplace(arr,n,13);
-        Nonzerotolast(arr,n);
+      //  Nonzerotolast(arr,n);
+      //Linearsearch(arr,n,45);
     }
 }
