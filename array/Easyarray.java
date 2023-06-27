@@ -144,12 +144,22 @@ public class Easyarray {
                }   
                System.out.println("not found");
       }
+      static void MissingNum(int arr[], int N){
+        int xor1=0, xor2=0;
+        int n=N-1;
+        for(int i=0;i<n;i++){
+            xor2=xor2^arr[i];
+            xor1=xor1^(i+1);
+        }
+        xor1=xor1^N;
+        System.out.println( xor1^xor2);
+      }
       static void Rough(int arr,int n){
         int large = Integer.MIN_VALUE;
         System.out.println(large);
     }
     public static void main(String[] args) {
-        int arr[]={13,0,14,0,2,0,76,45};
+        int arr[]={1,2,3,5};
         int arr1[]={1,1,2,2,2,3,4};
         int n=arr.length;
         int n1=arr1.length;
@@ -165,5 +175,6 @@ public class Easyarray {
         //Leftrotatedplace(arr,n,13);
       //  Nonzerotolast(arr,n);
       //Linearsearch(arr,n,45);
+      MissingNum(arr,n);
     }
 }
