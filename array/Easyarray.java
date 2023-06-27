@@ -154,12 +154,26 @@ public class Easyarray {
         xor1=xor1^N;
         System.out.println( xor1^xor2);
       }
+      static int findMaxConsecutiveOnes(int arr[]){
+        int maxi=0;
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==1){
+                count++;
+            }else{
+                count=0;
+            }
+            maxi=Math.max(maxi,count);
+        }
+        System.out.println(maxi);
+        return maxi;
+      }
       static void Rough(int arr,int n){
         int large = Integer.MIN_VALUE;
         System.out.println(large);
     }
     public static void main(String[] args) {
-        int arr[]={1,2,3,5};
+        int arr[]={1,1,3,1,1,1,5};
         int arr1[]={1,1,2,2,2,3,4};
         int n=arr.length;
         int n1=arr1.length;
@@ -175,6 +189,7 @@ public class Easyarray {
         //Leftrotatedplace(arr,n,13);
       //  Nonzerotolast(arr,n);
       //Linearsearch(arr,n,45);
-      MissingNum(arr,n);
+     // MissingNum(arr,n);
+     findMaxConsecutiveOnes(arr);
     }
 }
