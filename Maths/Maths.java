@@ -5,7 +5,7 @@ public class Maths {
         while(n> 0){
             n /= 10;
             Count =Count+1;
-            
+          System.out.println(n);  
         }
         System.out.println(Count);
     }
@@ -18,7 +18,6 @@ public class Maths {
            
         }
          System.out.println(Rever);
-        
     }
     static void Palidrome(int n){
         int Rever=0;
@@ -60,6 +59,7 @@ public class Maths {
                 System.out.print(i+",");
             }
         }
+        System.out.println();
     }
     static void Prime(int n){
         int cout=0;
@@ -89,7 +89,7 @@ public class Maths {
         Reverse(2004);
         Palidrome(12);
         Amstrong(371);
-        Divisor(3);
+        Divisor(30);
         Prime(12);
         Hcf(30,20);
     }
