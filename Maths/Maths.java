@@ -56,7 +56,7 @@ public class Maths {
     static void Divisor(int n){
         for(int i=1;i<=n;i++){
             if(n%i==0){
-                System.out.print(i+",");
+                System.out.print(i+" ");
             }
         }
         System.out.println();
@@ -85,12 +85,12 @@ public class Maths {
         }
     }
     public static void main(String[] args) {
-        Countingdigits(2004);
-        Reverse(2004);
-        Palidrome(12);
-        Amstrong(371);
+        // Countingdigits(2004);
+        // Reverse(2004);
+        // Palidrome(12);
+        // Amstrong(371);
         Divisor(30);
-        Prime(12);
+        // Prime(12);
         Hcf(30,20);
     }
 }
