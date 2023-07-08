@@ -6,6 +6,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Midium {
+     static void twoSum(int[] nums, int target,int n) {
+         Arrays.sort(nums);
+       int left=0;      
+       int right=n-1;
+       while(left<right){
+           int sum=nums[left]+nums[right];
+           if(sum==target) {
+               System.out.print(nums[left]+"  " +nums[right]);
+               return;
+           }
+           else if(sum<target) left++;
+           else right--;
+       }
+       System.out.println();
+       
+    }
         static void zeroonetwoSort(ArrayList<Integer> arr,int n){
             int low=0;
             int mid=0;
@@ -45,7 +61,7 @@ public class Midium {
      for (Map.Entry<Integer,Integer> entry : map.entrySet())
     {
         if(entry.getValue()>n/2) {
-            System.out.println(entry.getValue()+" "+entry.getKey());
+            System.out.println(entry.getKey()+" "+entry.getValue()+" ");
         }
     }
   return -1;
@@ -53,6 +69,7 @@ public class Midium {
             
     public static void main(String[] args) {
         int arr1[]= {1,2,1,2,2,2};
+        int arr3[]= {2, 6, 5, 8, 11};
          int n = 6;
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(new Integer[] {0, 2, 1, 2, 0, 1}));
         zeroonetwoSort(arr, n);
@@ -61,8 +78,9 @@ public class Midium {
             System.out.print(arr.get(i) + " ");
         }
         System.out.println();
-        nby2TImes(arr1,n);
-
+       // nby2TImes(arr1,n);
+        twoSum(arr3,14,5);
+        
     }
 
 }
