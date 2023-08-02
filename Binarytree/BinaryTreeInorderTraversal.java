@@ -37,6 +37,9 @@ class TUF {
         postOrderTrav(curr.right, postOrder);
         postOrder.add(curr.data);
     }
+
+
+
 public static void levelOrderTraversal(Node root) {
         if (root == null) {
             return;
@@ -58,7 +61,13 @@ public static void levelOrderTraversal(Node root) {
             }
         }
     }
-    
+    public static int Maxdepth(Node root){
+        if(root==null) return 0;
+        int ls=  Maxdepth(root.left);
+        int Rs= Maxdepth(root.right);
+        // System.out.print(1+Math.max(ls,Rs));
+        return  1 + Math.max(ls,Rs);
+    }
 
 
     public static void main(String args[]) {
@@ -76,13 +85,13 @@ public static void levelOrderTraversal(Node root) {
 
         // ArrayList < Integer > inOrder = new ArrayList < > ();
         // inOrderTrav(root, inOrder);
-        ArrayList <Integer> preOrder = new ArrayList<>();
-        preOrderTrav(root,preOrder);
-
-
-        System.out.println("The inOrder Traversal is : ");
-        for (int i = 0; i < preOrder.size(); i++) {
-            System.out.print(preOrder.get(i) + " ");
-        }
+        // ArrayList <Integer> preOrder = new ArrayList<>();
+        // preOrderTrav(root,preOrder);
+        //  levelOrderTraversal(root);
+            Maxdepth(root);
+        // System.out.println("The inOrder Traversal is : ");
+        // for (int i = 0; i < preOrder.size(); i++) {
+        //     System.out.print(preOrder.get(i) + " ");
+        // }
     }
 }
