@@ -47,40 +47,42 @@ public class Midium {
         }
         static int nby2TImes(int arr[],int n){
             HashMap<Integer, Integer> map = new HashMap<>();
-              for (int i = 0; i < n; i++)
-    {
-        if (map.containsKey(arr[i]))
-        {
-            map.put(arr[i], map.get(arr[i]) + 1);
+              for (int i = 0; i < n; i++) {
+            int value = map.getOrDefault(arr[i], 0);
+            map.put(arr[i], value + 1);
         }
-        else
-        {
-            map.put(arr[i], 1);
+
+    for (Map.Entry<Integer, Integer> it : map.entrySet()) {
+            if (it.getValue() > (n / 2)) {
+                return it.getKey();
+            }
         }
-    }
-     for (Map.Entry<Integer,Integer> entry : map.entrySet())
-    {
-        if(entry.getValue()>n/2) {
-            System.out.println(entry.getKey()+" "+entry.getValue()+" ");
+        return -1;
         }
-    }
-  return -1;
-        }
+        static void maxProfit(int[] arr) {
+            int maxPro = 0;
+            int minPrice = arr[0];
+            for (int i = 0; i < arr.length; i++) {
+                minPrice = Math.min(minPrice, arr[i]);
+                maxPro = Math.max(maxPro, arr[i] - minPrice);
+            }
+            System.out.println(maxPro); 
+            }
             
     public static void main(String[] args) {
-        int arr1[]= {1,2,1,2,2,2};
+        int arr1[]= {3,2,3};
         int arr3[]= {2, 6, 5, 8, 11};
          int n = 6;
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(new Integer[] {0, 2, 1, 2, 0, 1}));
-        zeroonetwoSort(arr, n);
+        // zeroonetwoSort(arr, n);
         System.out.println("After sorting:");
         for (int i = 0; i < n; i++) {
             System.out.print(arr.get(i) + " ");
         }
         System.out.println();
-       // nby2TImes(arr1,n);
-        twoSum(arr3,14,5);
-        
+    //    nby2TImes(arr1,n);
+        // twoSum(arr3,14,5);
+        maxProfit(arr3);
     }
 
 }
