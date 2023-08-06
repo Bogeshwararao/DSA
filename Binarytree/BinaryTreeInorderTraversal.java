@@ -61,13 +61,17 @@ public static void levelOrderTraversal(Node root) {
             }
         }
     }
-    public static int Maxdepth(Node root){
-        if(root==null) return 0;
-        int ls=  Maxdepth(root.left);
-        int Rs= Maxdepth(root.right);
-        // System.out.print(1+Math.max(ls,Rs));
-        return  1 + Math.max(ls,Rs);
-    }
+  public static int Maxdepth(Node root) {
+    if (root == null)
+        return 0;
+
+    int ls = Maxdepth(root.left);
+    int Rs = Maxdepth(root.right);
+
+    int maxDepth = 1 + Math.max(ls, Rs);
+    //  System.out.println("Maximum depth of the binary tree: " + maxDepth);
+    return maxDepth;
+}
 
 
     public static void main(String args[]) {
@@ -88,8 +92,10 @@ public static void levelOrderTraversal(Node root) {
         // ArrayList <Integer> preOrder = new ArrayList<>();
         // preOrderTrav(root,preOrder);
         //  levelOrderTraversal(root);
-            Maxdepth(root);
-        // System.out.println("The inOrder Traversal is : ");
+        int maxDepth = Maxdepth(root);
+        
+    System.out.println("Maximum depth of the binary tree: " + maxDepth);
+            // System.out.println("The inOrder Traversal is : ");
         // for (int i = 0; i < preOrder.size(); i++) {
         //     System.out.print(preOrder.get(i) + " ");
         // }
