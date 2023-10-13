@@ -78,8 +78,9 @@ public class Graph {
           boolean vis[] = new boolean[V];
           for(int i=0;i<V;i++){
             if(vis[i]== false){
-                        //   Bfs(graph, V,vis,i);
-                        dfs(graph,i,vis);
+                         Bfs(graph, V,vis,i);
+                         System.out.println();
+                        // dfs(graph,i,vis);
             }
           }
       
