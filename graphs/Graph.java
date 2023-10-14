@@ -70,20 +70,37 @@ public class Graph {
                 }
                }
     }
+    public static void Allpath(ArrayList<Edge> graph[],boolean vis[],int curr,String path,int tar){
+         if(curr == tar){
+            System.out.println(path+" ");
+            return;
+         }
+         for(int i=0;i<graph[curr].size();i++){
+            Edge e = graph[curr].get(i);
+            if(vis[curr]== false){
+                   vis[curr]=true;
+                   Allpath(graph,vis,e.des,path+e.des,tar);
+                   vis[curr] = false;
+
+            }
+         }
+    }
     public static void main(String[] args) {
         int V = 7;
         ArrayList<Edge>[] graph = new ArrayList[V];
         
         CreateGraph(graph, V);
-          boolean vis[] = new boolean[V];
-          for(int i=0;i<V;i++){
-            if(vis[i]== false){
-                         Bfs(graph, V,vis,i);
-                         System.out.println();
-                        // dfs(graph,i,vis);
-            }
-          }
-      
+           boolean vis[] = new boolean[V];
+        //   for(int i=0;i<V;i++){
+        //     if(vis[i]== false){
+        //                  Bfs(graph, V,vis,i);
+        //                  System.out.println();
+        //                 // dfs(graph,i,vis);
+        //     }
+        //   }
+        int curr=0;
+        int tar=5;
+       Allpath(graph,vis,curr,"0",tar);
                
     }
 }
